@@ -40,7 +40,7 @@ Fill in your API keys in `.env`. At minimum you need:
 uv run jupyter notebook
 ```
 
-Open `deep_agents_interrrup26.ipynb` and run the cells top to bottom.
+Open `deep_agents_interrupt26.ipynb` and run the cells top to bottom.
 
 ## Model Providers
 
