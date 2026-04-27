@@ -1,0 +1,19 @@
+[project]
+name = "interrupt26-deepagents"
+version = "0.1.0"
+description = "Deep Agents workshop notebook for Interrupt 2026"
+requires-python = ">=3.11"
+dependencies = [
+    "deepagents>=0.4.12",
+    "langchain>=1.0.1",
+    "langchain-openai>=1.1.14",
+    "langchain-anthropic>=1.0.0",
+    "langchain-google-genai>=3.0.0",
+    "langgraph>=1.0.1",
+    "langgraph-cli[inmem]>=0.4.4",
+    "langsmith>=0.7.31",
+    "notebook>=7.4.7",
+    "python-dotenv>=1.1.1",
+    "tavily-python>=0.7.21",
+]
+
