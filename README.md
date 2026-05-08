@@ -33,8 +33,8 @@ uv sync
 cp .env.example .env
 ```
 Fill in your API keys in `.env`. At minimum:
-- `ANTHROPIC_API_KEY` (or swap providers — see `utils/models.py`)
-- `TAVILY_API_KEY` — free at [tavily.com](https://tavily.com)
+- `OPENAI_API_KEY` (default models: `gpt-5.4` main agent, `gpt-5.4-mini` subagent — or swap providers in `utils/models.py`)
+- `TAVILY_API_KEY` - free at [tavily.com](https://tavily.com)
 
 Optional but recommended:
 - `LANGSMITH_API_KEY` + `LANGSMITH_TRACING=true` for full trace observability
@@ -73,7 +73,7 @@ When you're ready to deploy, `langgraph.json` is already shaped for [LangSmith D
 
 ## Model providers
 
-The default model is Anthropic (`claude-haiku-4-5`). To switch, edit `utils/models.py` — commented-out sections are included for OpenAI, Azure OpenAI, AWS Bedrock, and Google Vertex AI (Gemini). For non-default providers, install the matching extra:
+The default model is OpenAI (`gpt-5.4` for the main agent, `gpt-5.4-mini` for the research subagent in Part 4). To switch, edit `utils/models.py` — commented-out sections are included for Anthropic, Azure OpenAI, AWS Bedrock, and Google Vertex AI (Gemini). For non-default providers, install the matching extra:
 
 ```zsh
 uv sync --extra azure     # Azure OpenAI
