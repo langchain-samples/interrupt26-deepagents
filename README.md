@@ -17,16 +17,18 @@ A workshop on building a research agent from scratch with the [Deep Agents](http
 
 **1. Clone the repo**
 ```zsh
-git clone https://github.com/langchain-ai/interrupt26-deepagents.git
+git clone https://github.com/langchain-samples/interrupt26-deepagents.git
 cd interrupt26-deepagents
 ```
 
 **2. Install dependencies**
+Install the [uv package manager](https://docs.astral.sh/uv/getting-started/installation/) if it is not already installed.
 ```zsh
 uv sync
 ```
 
 **3. Configure environment**
+
 ```zsh
 cp .env.example .env
 ```
@@ -42,9 +44,9 @@ Optional but recommended:
 ### A. Walk through the notebook
 
 ```zsh
-uv run jupyter notebook
+uv run jupyter lab
 ```
-Open `deep_agent.ipynb` and run the cells top to bottom. The 8 parts each take ~30s to a couple minutes to execute.
+Open `deep_agent.ipynb` and run the cells top to bottom. The 8 parts each take ~30s to a couple of minutes to execute.
 
 ### B. Run the agent in LangSmith Studio
 
