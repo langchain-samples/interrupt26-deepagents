@@ -1,9 +1,8 @@
-"""
-Model Initialization File
+"""Model Initialization File
 
 Configures the LLM model used throughout the workshop notebook.
 
-Default: OpenAI (gpt-5.4) for the main agent. The research subagent in Part 4
+Default: OpenAI (gpt-5.5) for the main agent. The research subagent in Part 4
 of the notebook uses gpt-5.4-mini. Both come from the OPENAI_API_KEY in `.env`.
 
 ═══════════════════════════════════════════════════════════════════════════
@@ -16,7 +15,7 @@ of the notebook uses gpt-5.4-mini. Both come from the OPENAI_API_KEY in `.env`.
   Anthropic             -                            yes (default dep)
   Azure OpenAI          uv sync --extra azure        no - install first
   AWS Bedrock           uv sync --extra bedrock      no - install first
-  Google Vertex AI      uv sync --extra vertex       no - install first
+  Google Vertex/Gemini  uv sync --extra google       no - install first
 
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -38,15 +37,13 @@ from langchain.chat_models import init_chat_model
 
 
 # ---- Default Models -------------------------------------------------------
-# Workshop default: OpenAI GPT-5.4 for the main agent.
+# Workshop default: OpenAI GPT-5.5 for the main agent.
 # Requires OPENAI_API_KEY in .env
-model = init_chat_model("openai:gpt-5.4")
+model = init_chat_model("openai:gpt-5.5")
 sub_agent_model = init_chat_model("openai:gpt-5.4-mini")
 
 # model = init_chat_model("anthropic:claude-haiku-4-5")
 # model = init_chat_model("openai:gpt-4.1-mini")
-
-
 
 
 # ---- Azure OpenAI Using Environment Variables ---------------------------------------------------------
@@ -54,7 +51,7 @@ sub_agent_model = init_chat_model("openai:gpt-5.4-mini")
 # from langchain_openai import AzureChatOpenAI
 
 # model = AzureChatOpenAI(
-#     azure_deployment="gpt-5.4",
+#     azure_deployment="gpt-5.5",
 #     api_version="2024-12-01-preview"
 # )
 

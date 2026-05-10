@@ -6,7 +6,7 @@ A workshop on building a research agent from scratch with the [Deep Agents](http
 
 - Creating a basic Deep Agent with built-in filesystem and planning tools
 - Adding custom tools (web search via Tavily)
-- Understanding backends: StateBackend, FilesystemBackend, StoreBackend, CompositeBackend
+- Understanding backends (`StateBackend`, `FilesystemBackend`, `StoreBackend`, `CompositeBackend`)
 - Delegating work to subagents for context isolation
 - Human-in-the-loop approval for sensitive operations
 - Long-term memory with `/memories/*` routing across threads
@@ -16,6 +16,7 @@ A workshop on building a research agent from scratch with the [Deep Agents](http
 ## Setup
 
 **1. Clone the repo**
+
 ```zsh
 git clone https://github.com/langchain-samples/interrupt26-deepagents.git
 cd interrupt26-deepagents
@@ -23,6 +24,7 @@ cd interrupt26-deepagents
 
 **2. Install dependencies**
 Install the [uv package manager](https://docs.astral.sh/uv/getting-started/installation/) if it is not already installed.
+
 ```zsh
 uv sync
 ```
@@ -32,11 +34,14 @@ uv sync
 ```zsh
 cp .env.example .env
 ```
+
 Fill in your API keys in `.env`. At minimum:
+
 - `OPENAI_API_KEY` (default models: `gpt-5.4` main agent, `gpt-5.4-mini` subagent — or swap providers in `utils/models.py`)
 - `TAVILY_API_KEY` - free at [tavily.com](https://tavily.com)
 
 Optional but recommended:
+
 - `LANGSMITH_API_KEY` + `LANGSMITH_TRACING=true` for full trace observability
 
 ## Run it
@@ -46,6 +51,7 @@ Optional but recommended:
 ```zsh
 uv run jupyter lab
 ```
+
 Open `deep_agent.ipynb` and run the cells top to bottom. The 8 parts each take ~30s to a couple of minutes to execute.
 
 ### B. Run the agent in LangSmith Studio
@@ -57,6 +63,7 @@ uv run langgraph dev
 ```
 
 You'll see something like:
+
 ```
 - 🚀 API:        http://127.0.0.1:2024
 - 🎨 Studio UI:  https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
