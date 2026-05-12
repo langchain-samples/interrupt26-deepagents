@@ -43,7 +43,7 @@ model = init_chat_model("openai:gpt-5.4")
 sub_agent_model = init_chat_model("openai:gpt-5.4-mini")
 
 # model = init_chat_model("anthropic:claude-haiku-4-5")
-# model = init_chat_model("openai:gpt-4.1-mini")
+# sub_agent_model = init_chat_model("anthropic:claude-haiku-4-5")
 
 
 # ---- Azure OpenAI Using Environment Variables ---------------------------------------------------------
