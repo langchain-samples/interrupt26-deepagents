@@ -28,7 +28,7 @@ REPO_ROOT = AGENT_DIR.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from langchain_core.tools import tool
+from langchain.tools import tool
 from tavily import TavilyClient
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.store.memory import InMemoryStore
@@ -79,7 +79,7 @@ deep_agent = create_deep_agent(
     model=model,
     tools=[tavily_search],
     system_prompt="You are an expert research assistant.",
-    memory=["./AGENTS.md"],         # always loaded into the system prompt
-    skills=["./skills/"],            # loaded on demand via progressive disclosure
-    backend=backend
+    memory=["./AGENTS.md"],  # always loaded into the system prompt
+    skills=["./skills/"],  # loaded on demand via progressive disclosure
+    backend=backend,
 )

@@ -44,6 +44,12 @@ Optional but recommended:
 
 - `LANGSMITH_API_KEY` + `LANGSMITH_TRACING=true` for full trace observability
 
+If anything looks off (wrong Python, missing keys, env-var conflicts), run the bundled diagnostic:
+
+```zsh
+uv run python env_utils.py
+```
+
 ## Run it
 
 ### A. Walk through the notebook
@@ -85,5 +91,5 @@ The default model is OpenAI (`gpt-5.4` for the main agent, `gpt-5.4-mini` for th
 ```zsh
 uv sync --extra azure     # Azure OpenAI
 uv sync --extra bedrock   # AWS Bedrock
-uv sync --extra vertex    # Google Vertex AI
+uv sync --extra google    # Google Vertex AI
 ```

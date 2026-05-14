@@ -57,7 +57,7 @@ sub_agent_model = init_chat_model("openai:gpt-5.4-mini")
 #     api_version="2024-12-01-preview"
 # )
 
-# sub_agent_model = model = AzureChatOpenAI(
+# sub_agent_model = AzureChatOpenAI(
 #     azure_deployment="gpt-5.4",
 #     api_version="2024-12-01-preview"
 # )
