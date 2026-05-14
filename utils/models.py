@@ -48,9 +48,16 @@ sub_agent_model = init_chat_model("openai:gpt-5.4-mini")
 
 # ---- Azure OpenAI Using Environment Variables ---------------------------------------------------------
 # Install first:  uv sync --extra azure
+# You need to have the OPENAI_API_KEY and AZURE_OPENAI_ENDPOINT 
+# environment variables.
 # from langchain_openai import AzureChatOpenAI
 
 # model = AzureChatOpenAI(
+#     azure_deployment="gpt-5.4",
+#     api_version="2024-12-01-preview"
+# )
+
+# sub_agent_model = model = AzureChatOpenAI(
 #     azure_deployment="gpt-5.4",
 #     api_version="2024-12-01-preview"
 # )
